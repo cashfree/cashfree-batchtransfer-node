@@ -1,0 +1,14 @@
+{
+  "name": "bulk_transfer_node",
+  "version": "1.0.0",
+  "description": "cashfree integration kit for cashgram bulk transfers ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vrishab@cahsfree.com",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
