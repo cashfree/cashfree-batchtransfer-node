@@ -53,8 +53,8 @@ Sample Fields to add a beneficiary using bankAccount and ifsc:
   1. transferId: unique identifier of the transfer.
   2. amount: amount to be sent.
   3. phone: phone number of the recipient.
-  4. bankAccount: back account of the recipient.
-  5. ifsc: recipients bank accounts's ifsc.
+  4. bankAccount: bank account of the recipient.
+  5. ifsc: recipient's bank account's ifsc.
   6. email: email of the recipient.
   7. name: name of the recipient.
   <br/>
