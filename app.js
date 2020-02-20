@@ -1,10 +1,10 @@
 /*
-Below is an integration flow on how to use Cashfree's payouts sdk. The sdk can be found at: https://github.com/cashfree/cashfree-sdk-nodejs
+Below is an integration flow on how to use Cashfree's payouts SDK. The SDK can be found at: https://github.com/cashfree/cashfree-sdk-nodejs
 Please go through the payout docs here: https://docs.cashfree.com/docs/payout/guide/
 
 The following script contains the following functionalities :
-    1. RequestBatchTransfer -> request a batch transfer
-    2. GetBatchTransfer -> get the status of the requested batch transfer
+    1. Transfers.RequestBatchTransfer -> request a batch transfer
+    2. Transfers.GetBatchTransfer -> get the status of the requested batch transfer
 */
 
 const cfSdk = require('cashfree-sdk');
