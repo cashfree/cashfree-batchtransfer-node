@@ -1,13 +1,14 @@
 /*
-Below is an integration flow on how to use Cashfree's payouts sdk. The sdk can be found at: https://github.com/cashfree/cashfree-sdk-nodejs
-Please go through the payout docs here: https://docs.cashfree.com/docs/payout/guide/
+Below is an integration flow on how to use Cashfree's payouts SDK. The SDK can be found at: https://github.com/cashfree/cashfree-sdk-nodejs
+Please go through the payout docs here: https://dev.cashfree.com/payouts
 
 The following script contains the following functionalities :
-    1. RequestBatchTransfer -> request a batch transfer
-    2. GetBatchTransfer -> get the status of the requested batch transfer
+    1. Transfers.RequestBatchTransfer -> request a batch transfer
+    2. Transfers.GetBatchTransfer -> get the status of the requested batch transfer
 */
 
 const cfSdk = require('cashfree-sdk');
+const util = require('util');
 
 const config = {
     Payouts:{
@@ -21,15 +22,15 @@ const {Payouts} = cfSdk;
 const {Transfers} = Payouts;
 
 const BatchTransfer = {
-    "batchTransferId" : "Test_Bank_Account_Format_45",
-    "batchFormat": "BANK_ACCOUNT" ,
+    "batchTransferId" : "Test_Bank_Account_Format_60",
+    "batchFormat": "BANK_ACCOUNT",
     "deleteBene" : 1, 
     "batch" : [
-        {"transferId" : "PTM_00121241112", 
+        {"transferId" : "PTM_00121244328723", 
         "amount" : "12",
         "phone" : "9999999999",
-        "bankAccount" : "9999999999" , 
-        "ifsc" : "PYTM0_000001",
+        "bankAccount" : "00011020001772", 
+        "ifsc" : "HDFC0000001",
         "email" : "bahrat@gocashfree.com", 
         "name": "bharat"}
         ]
@@ -51,7 +52,9 @@ const BatchTransfer = {
             const result = await Transfers.GetBatchTransferStatus({
                 batchTransferId: BatchTransfer.batchTransferId,
             });
-            console.log("get batch transfer status result:", result);
+            console.log("get batch transfer status result:", util.inspect(result, {showHidden: false, depth: null}));
+            //To print the object un comment below line.
+            //console.log("get batch transfer status result:", result);
         }
         catch(err){
             console.log("err caught in getting batch transfer status");
