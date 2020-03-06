@@ -11,8 +11,8 @@ This kit is linked to the standard transfer flow. Go [here](https://dev.cashfree
 The following kit contains the following functionalities of the node SDK:
     <ol>
     <li> Init: to initialize the SDK.
-    <li> Transfers.RequestBatchTransfer: to request a batch transfer
-    <li> Transfers.GetBatchTransferStatus: to get the status of the requested batch transfer
+    <li> Transfers.RequestBatchTransfer: to request a batch transfer.
+    <li> Transfers.GetBatchTransferStatus: to get the status of the requested batch transfer.
     </ol>
 <br/>
 You can get more information on the node SDK [here](https://github.com/cashfree/cashfree-sdk-nodejs).
@@ -62,7 +62,7 @@ Sample Fields to add a beneficiary using bankAccount and ifsc:
   
   1. transferId: unique identifier of the transfer.
   2. amount: amount to be sent.
-  3. beneId: id of the beneficiary
+  3. beneId: id of the beneficiary.
 
 ## Usage
 
